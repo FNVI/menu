@@ -14,7 +14,7 @@ and open the template in the editor.
         
         // Declare the post variables we will be looking for
         $args = array(
-            //add _id field on this line like the one below
+            "_id"=>FILTER_SANITIZE_STRING,
             "description"=>FILTER_SANITIZE_STRING
         );
         
@@ -31,7 +31,7 @@ and open the template in the editor.
         // Typical switch statement calling our functions from the Todo object
         switch($action)
         {
-            // add a case to delete items from the list on this line
+            case "remove": $todo->delete(); break;
             case "add": $todo->createTodo($post_vars["description"]); break;
             // add a case to edit items on this line
             // add a case to mark items as done on this line
@@ -108,7 +108,7 @@ and open the template in the editor.
                                             <?php } ?>
 
                                             <!--The button below triggers a modal to confirm removing items, add the functionality to trigger a modal-->
-                                            <button type="button" class="btn btn-default" data-id="<?php echo $id; ?>">
+                                            <button type="button" class="btn btn-default" data-id="<?php echo $id; ?>" data-toggle="modal" data-target="#modalRemove">
                                                 <i class="fa fa-times text-danger"></i>
                                             </button>
                                         </div>

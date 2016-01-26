@@ -27,11 +27,11 @@
  ******************************************************************/
 define("DB_SERVER","web.plenary-group.com");
 
-define("DB_NAME", "database");
+define("DB_NAME", "josh");
 
-define("DB_USER","username");
+define("DB_USER","josh2");
 
-define("DB_PASS","password");
+define("DB_PASS","553762073a71a439758b4567");
 
 define("DB_PORT",null);
 
