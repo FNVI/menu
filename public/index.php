@@ -34,7 +34,7 @@ and open the template in the editor.
             case "remove": $todo->delete(); break;
             case "add": $todo->createTodo($post_vars["description"]); break;
             // add a case to edit items on this line
-            // add a case to mark items as done on this line
+            case "done": $todo->done(); $todo->store(); break;
         }
         
         // This creates a cursor of all the Todo items in our database
@@ -88,7 +88,7 @@ and open the template in the editor.
                                      * This shorthand version of an if statement. 
                                      * For more info lookup the ternary oprator in the php online manual
                                      */
-                                     $class = $todoItem["done"] ? "" : "";
+                                     $class = $todoItem["done"] ? "josh" : "";
                                     ?>
                                     <li class="list-group-item clearfix <?php echo $class; ?>">
                                         <span class="todo-description">
