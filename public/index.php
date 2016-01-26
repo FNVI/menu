@@ -33,7 +33,7 @@ and open the template in the editor.
         {
             case "remove": $todo->delete(); break;
             case "add": $todo->createTodo($post_vars["description"]); break;
-            // add a case to edit items on this line
+            case "edit": $todo->setDescription($post_vars["description"]); $todo->store(); break;
             case "done": $todo->done(); $todo->store(); break;
         }
         
@@ -102,8 +102,9 @@ and open the template in the editor.
                                             <button type="submit" class="btn btn-success" name="_id" value="<?php echo $id; ?>">
                                                 <i class="fa fa-check"></i>Done
                                             </button>
-                                            
-<!--                                            Add button here to edit items-->
+                                            <button type="button" class="btn btn-default" data-id="<?php echo $id; ?>" data-toggle="modal" data-target="#modalAdd" data-action="edit">
+                                                <i class="fa fa-cog text-danger"></i>
+                                            </button>
                                             
                                             <?php } ?>
 
