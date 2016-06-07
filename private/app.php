@@ -25,15 +25,15 @@
  * However here the parts have been separated out for ease of use,
  * these constants will be used later for creating that string
  ******************************************************************/
-define("DB_SERVER","web.plenary-group.com");
+define("DB_SERVER","cloud2.plenary-group.com");
 
 define("DB_NAME", "josh");
 
-define("DB_USER","josh2");
+define("DB_USER","josh");
 
-define("DB_PASS","553762073a71a439758b4567");
+define("DB_PASS","password");
 
-define("DB_PORT",null);
+define("DB_PORT","27019");
 
 /**
  * Collections inside the database will be named by constants too.
@@ -44,6 +44,7 @@ define("DB_PORT",null);
 
 define("TODO_COLLECTION","todo");
 
+define("FOOD_COLLECTION","food");
 
 
 /*

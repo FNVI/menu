@@ -7,3 +7,4 @@
 <!--Add javascript dependencies-->
 <script src="components/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="components/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/menu.js" type="text/javascript"></script>
